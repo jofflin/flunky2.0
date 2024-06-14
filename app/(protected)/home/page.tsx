@@ -212,7 +212,7 @@ export default async function HomePage() {
           </div>
         </div>
       </Card>
-      <h2>Aktuelles Spiel</h2>
+      <h2 className="text-lg">Aktuelles Spiel</h2>
       <GameBox
         admin={false}
         gameId={startedGames[0].id}
@@ -229,7 +229,7 @@ export default async function HomePage() {
         status={startedGames[0].status}
         gameName={startedGames[0].name}
       />
-      <h2>Deine Spiele</h2>
+      <h2 className="text-lg">Deine Spiele</h2>
       {games.map((game) => {
         const team1 = teams.find((team) => team.id === game.team1);
         const team2 = teams.find((team) => team.id === game.team2);

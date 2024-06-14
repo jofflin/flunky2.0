@@ -1,6 +1,12 @@
 import { createClient } from "@/utils/supabase/server";
 import { redirect } from "next/navigation";
-import { BiBell, BiCog, BiLogOut, BiNotification } from "react-icons/bi";
+import {
+  BiBell,
+  BiCog,
+  BiLogOut,
+  BiNotification,
+  BiParagraph,
+} from "react-icons/bi";
 import HeaderTitle from "./header-title.component";
 import Link from "next/link";
 import PushSetup from "./PushSetup";
@@ -29,6 +35,11 @@ export default async function Header() {
       <HeaderTitle />
       <div className="flex gap-3">
         {/* <PushSetup userId={user.id} /> */}
+        <Link href="/rules">
+          <button className="inline-flex items-center px-1 pt-1 text-sm font-medium leading-5 text-gray-100 transition duration-150 ease-in-out border-b-2 border-transparent ">
+            <BiParagraph className="w-8 h-8 text-white" />
+          </button>
+        </Link>
         <Link href="/account">
           <button className="inline-flex items-center px-1 pt-1 text-sm font-medium leading-5 text-gray-100 transition duration-150 ease-in-out border-b-2 border-transparent ">
             <BiCog className="w-8 h-8 text-white" />
