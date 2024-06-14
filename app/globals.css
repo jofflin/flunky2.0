@@ -4,31 +4,54 @@
 
 @layer base {
   :root {
-    --background: 200 20% 98%;
-    --btn-background: 200 10% 91%;
-    --btn-background-hover: 200 10% 89%;
-    --foreground: 200 50% 3%;
-  }
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
 
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 86 78% 27%;
+    --primary-foreground: 138 76% 97%;
+
+    --secondary: 138 76% 97%;
+    --secondary-foreground: 86 78% 27%;
+
+    --muted: 138 76% 97%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 138 76% 97%;
+    --accent-foreground: 86 78% 27%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+}
+
+.custom-card-border {
+  /* make border a gradient */
+  /* border-image: linear-gradient(to right, #4d7c0f, #84cc16) 1;
+  border-radius: 100%;
+  background-origin: border-box;
+  background-clip: content-box, border-box; */
+
+  border: double transparent;
+  background-image: linear-gradient(white, white),
+    linear-gradient(to right, #4d7c0f, #84cc16);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
 }
 
 @layer base {
-  * {
-    @apply border-foreground/20;
-  }
-}
-
-.animate-in {
-  animation: animateIn 0.3s ease 0.15s both;
-}
-
-@keyframes animateIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  body {
+    @apply bg-background text-foreground;
   }
 }

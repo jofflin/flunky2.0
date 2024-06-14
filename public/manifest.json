@@ -1,0 +1,13 @@
+{
+  "name": "Flunky Cup - Boetzingen",
+
+  "short_name": "Flunky Cup",
+
+  "start_url": "https://flunky.hoefflin.io",
+
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#fef9f3",
+  "theme_color": "#4d7c0f",
+  "description": "Flunky Cup App - Boetzingen"
+}
