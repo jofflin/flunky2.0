@@ -110,7 +110,7 @@ export default async function HomePage() {
   const { data: games, error: gamesError } = await supabase
     .from("games")
     .select("*")
-    .or(`team1.eq.${myTeam.id},team1.eq.${myTeam.id}`)
+    .or(`team1.eq.${myTeam.id},team2.eq.${myTeam.id}`)
     .order("id", { ascending: true });
 
   if (gamesError) {

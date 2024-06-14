@@ -24,8 +24,8 @@ export default async function Index() {
     data: { user },
   } = await supabase.auth.getUser();
 
-  if (!user) {
-    return redirect("/login");
+  if (user) {
+    return redirect("/home");
   }
 
   // const isSupabaseConnected = canInitSupabaseClient();
