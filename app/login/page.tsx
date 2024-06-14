@@ -50,7 +50,7 @@ export default async function Login({
       email,
       password,
       options: {
-        emailRedirectTo: `https://flunky.hoefflin.io/auth/callback`,
+        emailRedirectTo: `${origin}/auth/callback`,
       },
     });
 
