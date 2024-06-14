@@ -33,7 +33,8 @@ export default async function StandingsPage() {
     .select("*")
     .eq("status", "FINISHED")
     .eq("ko_game", false)
-    .eq("decider", false);
+    .eq("decider", false)
+    .order("id", { ascending: true });
 
   const { data: koGames, error: koGamesError } = await supabase
     .from("games")
