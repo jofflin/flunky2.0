@@ -138,7 +138,66 @@ export default async function HomePage() {
   }
 
   if (startedGames.length === 0) {
-    return <div>No started games found</div>;
+    return (
+      <Card key={myTeam.id} gradientOnBorder={true}>
+        <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center gap-2">
+            <Image
+              src={`${myTeam.image_url}`}
+              alt={myTeam.name}
+              className="object-cover w-16 h-16 rounded-lg "
+              width={60}
+              height={60}
+            />
+            <h2 className="text-lg text-transparent bg-gradient-to-r from-lime-700 via-lime-500 to-lime-400 bg-clip-text ">
+              {myTeam.name}
+            </h2>
+          </div>
+          <div className="flex justify-around w-full mt-4">
+            <div className="flex flex-row items-center gap-2">
+              {player1.avatar_url ? (
+                <Image
+                  className="object-cover w-10 h-10 rounded-full "
+                  src={`${player1.avatar_url}`}
+                  alt={player1.full_name ?? "Spieler 1"}
+                  width={32}
+                  height={32}
+                />
+              ) : (
+                <Image
+                  className="object-cover w-10 h-10 rounded-full "
+                  src={`MainAfter_1280x720.webp`}
+                  alt={player1.full_name ?? "Spieler 1"}
+                  width={32}
+                  height={32}
+                />
+              )}
+              <p>{player1.full_name}</p>
+            </div>
+            <div className="flex flex-row items-center gap-2">
+              {player2 && player2.avatar_url ? (
+                <Image
+                  className="object-cover w-10 h-10 rounded-full "
+                  src={`${player2.avatar_url}`}
+                  alt={player2.full_name ?? "Spieler 2"}
+                  width={32}
+                  height={32}
+                />
+              ) : (
+                <Image
+                  className="object-cover w-10 h-10 rounded-full "
+                  src={`MainAfter_1280x720.webp`}
+                  alt={"Spieler 2"}
+                  width={32}
+                  height={32}
+                />
+              )}
+              <p>{player2 ? player2.full_name : "Spieler 2"}</p>
+            </div>
+          </div>
+        </div>
+      </Card>
+    );
   }
 
   const currentGameTeam1 = teams.find(
