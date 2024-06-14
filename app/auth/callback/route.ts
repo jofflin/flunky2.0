@@ -14,6 +14,7 @@ export async function GET(request: Request) {
     await supabase.auth.exchangeCodeForSession(code);
   }
 
+  console.log("ORIGIN:", origin);
   // URL to redirect to after sign up process completes
-  return NextResponse.redirect(`https://flunky.hoefflin.io`);
+  return NextResponse.redirect(`${origin}`);
 }
