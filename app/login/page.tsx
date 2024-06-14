@@ -55,7 +55,9 @@ export default async function Login({
     });
 
     if (error) {
-      return redirect("/login?message=Could not authenticate user");
+      return redirect(
+        "/login?message=Fehlgeschlagen! Bitte erneut versuchen. Oder Jonas schreiben ;)"
+      );
     }
 
     return redirect(
