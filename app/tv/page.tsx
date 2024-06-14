@@ -143,7 +143,7 @@ export default function TVScreen() {
               <TableRow key={team.teamName}>
                 <TableCell className="flex flex-row items-center font-medium">
                   <Image
-                    src={`https://vysvyvruffebmllaeuyi.supabase.co/storage/v1/object/public/avatars/${team.teamLogo}`}
+                    src={`${team.teamLogo}`}
                     alt={team.teamName}
                     className="object-cover w-6 h-6 mr-2 rounded-full "
                     width={60}
@@ -178,7 +178,7 @@ export default function TVScreen() {
                                 ? "border-2 custom-card-border"
                                 : ""
                             } ${game.winner === "team2" ? "grayscale" : ""}`}
-                            src={`https://vysvyvruffebmllaeuyi.supabase.co/storage/v1/object/public/avatars/${game.team1.image_url}`}
+                            src={`${game.team1.image_url}`}
                             alt="team1"
                             style={imageStyle}
                             width={60}
@@ -225,7 +225,7 @@ export default function TVScreen() {
                                 ? "border-2 custom-card-border"
                                 : ""
                             } ${game.winner === "team1" ? "grayscale" : ""}`}
-                            src={`https://vysvyvruffebmllaeuyi.supabase.co/storage/v1/object/public/avatars/${game.team2.image_url}`}
+                            src={`${game.team2.image_url}`}
                             alt="team1"
                             style={imageStyle}
                             width={60}

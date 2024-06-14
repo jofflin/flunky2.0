@@ -120,7 +120,7 @@ export default async function StandingsPage() {
             <TableRow key={team.teamName}>
               <TableCell className="flex flex-row items-center font-medium">
                 <Image
-                  src={`https://vysvyvruffebmllaeuyi.supabase.co/storage/v1/object/public/avatars/${team.teamLogo}`}
+                  src={`${team.teamLogo}`}
                   alt={team.teamName}
                   className="object-cover w-6 h-6 mr-2 rounded-full "
                   width={60}

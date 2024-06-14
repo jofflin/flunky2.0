@@ -107,7 +107,7 @@ export default async function FinalsPage() {
             <TableRow key={team.name}>
               <TableCell className="flex flex-row items-center font-medium">
                 <Image
-                  src={`https://vysvyvruffebmllaeuyi.supabase.co/storage/v1/object/public/avatars/${team.image_url}`}
+                  src={`${team.image_url}`}
                   alt={team.name}
                   className="object-cover w-6 h-6 mr-2 rounded-full "
                   width={60}
@@ -138,7 +138,7 @@ export default async function FinalsPage() {
         <div className="bg-gradient-to-r from-lime-700 via-lime-500 to-lime-400 animate-text overflow-hidden bg-white  rounded-md shadow-md">
           <h1 className="mt-4 mb-2 text-lg text-center text-xl">{team.name}</h1>
           <Image
-            src={`https://vysvyvruffebmllaeuyi.supabase.co/storage/v1/object/public/avatars/${team.image_url}`}
+            src={`${team.image_url}`}
             alt={team.name}
             className="object-cover aspect-square rounded-lg w-full overflow-hidden bg-white  rounded-md shadow-md custom-card-border border-2"
             width={800}
@@ -159,7 +159,7 @@ export default async function FinalsPage() {
         <form className="bg-gradient-to-r from-lime-700 via-lime-500 to-lime-400 animate-text overflow-hidden bg-white  rounded-md shadow-md">
           <h1 className="mt-4 mb-2 text-lg text-center text-xl">{team.name}</h1>
           <Image
-            src={`https://vysvyvruffebmllaeuyi.supabase.co/storage/v1/object/public/avatars/${team.image_url}`}
+            src={`${team.image_url}`}
             alt={team.name}
             className="object-cover aspect-square rounded-lg w-full overflow-hidden bg-white  rounded-md shadow-md custom-card-border border-2 mb-2"
             width={800}

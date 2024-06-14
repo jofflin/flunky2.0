@@ -72,7 +72,7 @@ export default function GameBox({
                   ? "border-2 custom-card-border"
                   : ""
               } ${winner === "team2" ? "grayscale" : ""}`}
-              src={`https://vysvyvruffebmllaeuyi.supabase.co/storage/v1/object/public/avatars/${team1.profile}`}
+              src={`${team1.profile}`}
               alt="team1"
               style={imageStyle}
               width={60}
@@ -140,7 +140,7 @@ export default function GameBox({
                   ? "border-2 custom-card-border"
                   : ""
               } ${winner === "team1" ? "grayscale" : ""}`}
-              src={`https://vysvyvruffebmllaeuyi.supabase.co/storage/v1/object/public/avatars/${team2.profile}`}
+              src={`${team2.profile}`}
               alt="team1"
               style={imageStyle}
               width={60}

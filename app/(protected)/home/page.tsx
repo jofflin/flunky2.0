@@ -157,7 +157,7 @@ export default async function HomePage() {
         <div className="flex flex-col items-center">
           <div className="flex flex-col items-center gap-2">
             <Image
-              src={`https://vysvyvruffebmllaeuyi.supabase.co/storage/v1/object/public/avatars/${myTeam.image_url}`}
+              src={`${myTeam.image_url}`}
               alt={myTeam.name}
               className="object-cover w-16 h-16 rounded-lg "
               width={60}
@@ -172,7 +172,7 @@ export default async function HomePage() {
               {player1.avatar_url ? (
                 <Image
                   className="object-cover w-10 h-10 rounded-full "
-                  src={`https://vysvyvruffebmllaeuyi.supabase.co/storage/v1/object/public/avatars/${player1.avatar_url}`}
+                  src={`${player1.avatar_url}`}
                   alt={player1.full_name ?? "Spieler 1"}
                   width={32}
                   height={32}
@@ -180,7 +180,7 @@ export default async function HomePage() {
               ) : (
                 <Image
                   className="object-cover w-10 h-10 rounded-full "
-                  src={`https://vysvyvruffebmllaeuyi.supabase.co/storage/v1/object/public/avatars/MainAfter_1280x720.webp`}
+                  src={`MainAfter_1280x720.webp`}
                   alt={player1.full_name ?? "Spieler 1"}
                   width={32}
                   height={32}
@@ -192,7 +192,7 @@ export default async function HomePage() {
               {player2 && player2.avatar_url ? (
                 <Image
                   className="object-cover w-10 h-10 rounded-full "
-                  src={`https://vysvyvruffebmllaeuyi.supabase.co/storage/v1/object/public/avatar_urls/${player2.avatar_url}`}
+                  src={`${player2.avatar_url}`}
                   alt={player2.full_name ?? "Spieler 2"}
                   width={32}
                   height={32}
@@ -200,7 +200,7 @@ export default async function HomePage() {
               ) : (
                 <Image
                   className="object-cover w-10 h-10 rounded-full "
-                  src={`https://vysvyvruffebmllaeuyi.supabase.co/storage/v1/object/public/avatars/MainAfter_1280x720.webp`}
+                  src={`MainAfter_1280x720.webp`}
                   alt={"Spieler 2"}
                   width={32}
                   height={32}

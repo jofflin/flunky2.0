@@ -32,7 +32,7 @@ export default async function Index() {
 
   return (
     <div className="flex flex-col items-center gap-4 p-4">
-      <Image
+      <img
         src="/logo.jpg"
         className="rounded-2xl"
         alt="Logo"

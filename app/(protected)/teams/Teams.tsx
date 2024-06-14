@@ -68,7 +68,7 @@ export default async function TeamOverviewPage({
             <div className="flex flex-col items-center">
               <div className="flex flex-col items-center gap-2">
                 <Image
-                  src={`https://vysvyvruffebmllaeuyi.supabase.co/storage/v1/object/public/avatars/${team.image_url}`}
+                  src={`${team.image_url}`}
                   alt={team.name}
                   className="object-cover w-16 h-16 rounded-lg "
                   width={60}
@@ -83,7 +83,7 @@ export default async function TeamOverviewPage({
                   {team.player1.avatar ? (
                     <Image
                       className="object-cover w-10 h-10 rounded-full "
-                      src={`https://vysvyvruffebmllaeuyi.supabase.co/storage/v1/object/public/avatars/${team.player1.avatar}`}
+                      src={`${team.player1.avatar}`}
                       alt={team.player1.name}
                       width={32}
                       height={32}
@@ -91,7 +91,7 @@ export default async function TeamOverviewPage({
                   ) : (
                     <Image
                       className="object-cover w-10 h-10 rounded-full "
-                      src={`https://vysvyvruffebmllaeuyi.supabase.co/storage/v1/object/public/avatars/MainAfter_1280x720.webp`}
+                      src={`MainAfter_1280x720.webp`}
                       alt={team.player1.name}
                       width={32}
                       height={32}
@@ -103,7 +103,7 @@ export default async function TeamOverviewPage({
                   {team.player2.avatar ? (
                     <Image
                       className="object-cover w-10 h-10 rounded-full "
-                      src={`https://vysvyvruffebmllaeuyi.supabase.co/storage/v1/object/public/avatars/${team.player2.avatar}`}
+                      src={`${team.player2.avatar}`}
                       alt={team.player2.name}
                       width={32}
                       height={32}
@@ -111,7 +111,7 @@ export default async function TeamOverviewPage({
                   ) : (
                     <Image
                       className="object-cover w-10 h-10 rounded-full "
-                      src={`https://vysvyvruffebmllaeuyi.supabase.co/storage/v1/object/public/avatars/MainAfter_1280x720.webp`}
+                      src={`MainAfter_1280x720.webp`}
                       alt={team.player2.name}
                       width={32}
                       height={32}
