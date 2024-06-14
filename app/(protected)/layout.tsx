@@ -1,7 +1,6 @@
 import AuthButton from "@/components/AuthButton";
 import Header from "@/components/header.component";
 import Navigation from "@/components/navigation.component";
-import FetchDataSteps from "@/components/tutorial/FetchDataSteps";
 
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
@@ -19,19 +18,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-
     <div className="flex-1 w-full flex flex-col items-center">
-      <Header/>
-      <div className="h-16"/>
+      <Header />
+      <div className="h-16" />
 
       <div className="flex-1 flex flex-col px-3 py-6 w-full">
-        <main className="flex-1 flex flex-col gap-6">
-          {children}
-        </main>
+        <main className="flex-1 flex flex-col gap-6">{children}</main>
       </div>
 
-      <div className="h-16"/>
-      <Navigation/>
+      <div className="h-16" />
+      <Navigation />
     </div>
   );
 }

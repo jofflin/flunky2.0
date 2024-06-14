@@ -43,7 +43,7 @@ export const generateMatches = async () => {
   console.log(error);
 };
 
-const getMatches = (data) => {
+const getMatches = (data: [[][]]) => {
   let matches = [];
   let i = 0;
 
@@ -81,7 +81,7 @@ const getMatches = (data) => {
   return matches;
 };
 
-const schedule = (n) => {
+const schedule = (n: any) => {
   const teams = [...Array(n).keys()];
   const games = teams.flatMap((t1, i) =>
     teams.slice(i + 1).map((t2) => [t1, t2])
@@ -95,7 +95,7 @@ const schedule = (n) => {
   throw new Error("No solution found");
 };
 
-const solve = (games, meetings, gi, mi) => {
+const solve = (games: any, meetings: any, gi: any, mi: any) => {
   if (gi === games.length) {
     return true;
   }
@@ -115,7 +115,7 @@ const solve = (games, meetings, gi, mi) => {
   return false;
 };
 
-const satisfies = (game, meeting) => {
+const satisfies = (game: any, meeting: any) => {
   const [t1, t2] = game;
   const played = new Set(meeting.flat());
 
