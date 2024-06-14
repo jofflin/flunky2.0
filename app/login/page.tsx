@@ -32,7 +32,10 @@ export default async function Login({
     });
 
     if (error) {
-      return redirect("/login?message=Fehlgeschlagen! Bitte erneut versuchen.");
+      return redirect(
+        "/login?message=" +
+          encodeURIComponent("Fehlgeschlagen! Bitte erneut versuchen.")
+      );
     }
 
     return redirect("/home");
@@ -56,12 +59,13 @@ export default async function Login({
 
     if (error) {
       return redirect(
-        "/login?message=Fehlgeschlagen! Bitte erneut versuchen. Oder Jonas schreiben ;)"
+        "/login?message=" +
+          encodeURIComponent("Fehlgeschlagen! Bitte erneut versuchen.")
       );
     }
 
     return redirect(
-      "/login?message=Email unterwegs! Bitte überprüfen Sie Ihren Posteingang."
+      "/login?message=" + encodeURIComponent("Bitte bestätige deine E-Mail.")
     );
   };
 
