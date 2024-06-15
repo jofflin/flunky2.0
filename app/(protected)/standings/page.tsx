@@ -143,7 +143,10 @@ export default async function StandingsPage() {
             <GameBox
               gameId={game.id}
               gameName={game.name}
-              admin={user.email === "jonas@hoefflin.io" || user.email === "aa"}
+              admin={
+                user.email === "jonas@hoefflin.io" ||
+                user.email === "rickzimmerlin@web.de"
+              }
               key={game.id}
               team1={{
                 name: game.team1.name,
@@ -173,7 +176,10 @@ export default async function StandingsPage() {
             <GameBox
               gameId={game.id}
               gameName={game.name}
-              admin={user.email === "jonas@hoefflin.io" || user.email === "aa"}
+              admin={
+                user.email === "jonas@hoefflin.io" ||
+                user.email === "rickzimmerlin@web.de"
+              }
               key={game.id}
               team1={{
                 name: game.team1.name,
