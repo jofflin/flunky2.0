@@ -30,7 +30,7 @@ export default async function HomePage() {
   }
 
   if (!profile) {
-    return <div>Loading...</div>;
+    return <div>Loading....</div>;
   }
 
   const { data: teams, error: teamsError } = await supabase
@@ -83,7 +83,7 @@ export default async function HomePage() {
   }
 
   if (!player1) {
-    return <div>Loading...</div>;
+    return <div>Loading.....</div>;
   }
 
   let player2 = null;
@@ -99,10 +99,10 @@ export default async function HomePage() {
       return <div>Error loading players</div>;
     }
 
-    if (!player2) {
-      return <div>Loading...</div>;
-    }
     player2 = data;
+    if (!player2) {
+      return <div>Loading......</div>;
+    }
   }
 
   // get all games where myTeam is involved
@@ -119,7 +119,7 @@ export default async function HomePage() {
   }
 
   if (!games) {
-    return <div>Loading...</div>;
+    return <div>Loading........</div>;
   }
 
   // get started games
@@ -134,7 +134,7 @@ export default async function HomePage() {
   }
 
   if (!startedGames) {
-    return <div>Loading...</div>;
+    return <div>Loading..</div>;
   }
 
   if (startedGames.length === 0) {
@@ -208,7 +208,7 @@ export default async function HomePage() {
   );
 
   if (!currentGameTeam1 || !currentGameTeam2) {
-    return <div>Loading...</div>;
+    return <div>Loading.</div>;
   }
 
   return (
