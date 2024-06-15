@@ -63,7 +63,8 @@ export default function TVScreen() {
             (game) =>
               (game.team1 === team.id || game.team2 === team.id) &&
               !game.decider &&
-              !game.ko_game
+              !game.ko_game &&
+              game.status === "FINISHED"
           );
           const teamWins = teamGames.filter((game) => game.winner === team.id);
           const teamLosses = teamGames.filter(
